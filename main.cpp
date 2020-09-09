@@ -1,9 +1,8 @@
 #include "main.hpp"
-#include <SFML/Window.hpp>
 
 int main()
 {
-    std::cout << "Hello World" << std::endl;
+    std::cout << "Hello World, this is the master branch, you should not be using this branch" << std::endl;
 
     return (0);
 }
