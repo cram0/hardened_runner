@@ -14,7 +14,7 @@ class Entity {
         sf::Sprite      GetSprite();
 
         sf::Texture     GetTexture();
-        int             SetTexture(char *path);
+        int             SetTexture(char const *path);
 
         int             Draw(sf::RenderWindow *gameWindow);
 

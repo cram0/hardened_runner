@@ -32,7 +32,7 @@ sf::Texture Entity::GetTexture()
     return (texture);
 }
 
-int Entity::SetTexture(char *path)
+int Entity::SetTexture(char const *path)
 {
     texture.loadFromFile(path, sf::IntRect());
     sprite.setTexture(texture, false);
