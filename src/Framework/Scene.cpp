@@ -2,20 +2,15 @@
 
 Scene::Scene()
 {
-    
+    myEntity.SetTexture("../../assets/img/alucard/alucard_sheet.png");
 }
 
-Scene::~Scene()
+int Scene::Update(float deltaTime)
 {
-
+    myEntity.Update(deltaTime);
 }
 
-int Scene::Update()
+int Scene::Draw(sf::RenderWindow *gameWindow)
 {
-
-}
-
-int Scene::Draw()
-{
-
+    myEntity.Draw(gameWindow);
 }

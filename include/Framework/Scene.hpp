@@ -6,11 +6,12 @@
 class Scene {
     public:
         Scene();
-        ~Scene();
+
+        int     Update(float deltaTime);
+
+        int     Draw(sf::RenderWindow *gameWindow);
 
     protected:
-        int     Update();
-        int     Draw();
 
     private:
         Entity  myEntity;

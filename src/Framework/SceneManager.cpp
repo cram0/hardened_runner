@@ -5,17 +5,17 @@ SceneManager::SceneManager()
 
 }
 
-SceneManager::~SceneManager()
+int SceneManager::UpdateCurrentScene(float deltaTime)
 {
 
-}
-
-int SceneManager::UpdateCurrentScene()
-{
-    
 }
 
 int SceneManager::DrawCurrentScene()
 {
 
+}
+
+Scene SceneManager::GetSceneTest()
+{
+    return (this->myScene);
 }

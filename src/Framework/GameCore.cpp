@@ -3,20 +3,24 @@
 GameCore::GameCore()
 {
     gameWindow.create((sf::VideoMode){800, 600, 32}, "Hello World", sf::Style::Default);
-
 }
 
-GameCore::~GameCore()
+int GameCore::Update(CoreClock *coreClock)
 {
-
+   sceneManager.GetSceneTest().Update(coreClock->getClock().restart().asMilliseconds());
 }
 
-int GameCore::Update()
+int GameCore::Draw(sf::RenderWindow *gameWindow)
 {
-
+    sceneManager.GetSceneTest().Draw(gameWindow);
 }
 
-int GameCore::Draw()
+int GameCore::Run()
 {
-    
+    while (this->gameWindow.isOpen()) {
+        while (this->gameWindow.pollEvent(this->gameEvent)) {
+            Update(&this->coreClock);
+            Draw(&this->gameWindow);
+        }
+    }
 }

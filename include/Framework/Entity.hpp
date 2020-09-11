@@ -6,18 +6,26 @@
 
 class Entity {
     public:
+        Entity();
         Entity(char *path);
-        ~Entity();
+
+        int             Update(float deltaTime);
+
+        sf::Sprite      GetSprite();
+
+        sf::Texture     GetTexture();
+        int             SetTexture(char *path);
+
+        int             Draw(sf::RenderWindow *gameWindow);
 
     protected:
-        int             Update();
-        int             Draw();
 
+    private:
         sf::Sprite      sprite;
         sf::Texture     texture;
         sf::Vector2f    position;
-        
-    private:
+
+        int             UpdateSpritePosition(float deltaTime);
 
 };
 

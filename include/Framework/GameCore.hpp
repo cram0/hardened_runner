@@ -4,24 +4,26 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
+#include <SFML/Audio.hpp>
 
 #include "SceneManager.hpp"
+#include "CoreClock.hpp"
 
 class GameCore {
     public:
         GameCore();
-        ~GameCore();
+
+        int                 Update(CoreClock *coreClock);
+        int                 Draw(sf::RenderWindow *gameWindow);
+        int                 Run();
 
     protected:
 
     private:
-        int                 Update();
-        int                 Draw();
-
         sf::RenderWindow    gameWindow;
         sf::Event           gameEvent;
         SceneManager        sceneManager;
-
+        CoreClock           coreClock;
 };
 
 #endif /* !GAMECORE_HPP_ */

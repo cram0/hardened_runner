@@ -4,15 +4,16 @@ SRC         =       $(shell find . -name '*.cpp')
 
 OBJ         =       $(SRC:.cpp=.o)
 
-CXXFLAGS    +=      -Wall -Wextra -Wno-unused-parameter
+CXXFLAGS    +=      -Wall
+CXXFLAGS    +=      -Wextra
+CXXFLAGS    +=      -Wno-unused-parameter
 
-CXXFLAGS    +=      -I./include -lsfml-graphics -lsfml-window -lsfml-system \
-					-lsfml-audio
+CXXFLAGS    +=      -I./include -I./include/Framework
 
 all         :       $(NAME)
 
 $(NAME)     :       $(OBJ)
-					g++ -o $(NAME) $(OBJ) -g -O0
+					g++ -o $(NAME) $(OBJ) -g -O0 -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 clean       :
 					find . -name "*.o" -type f -delete

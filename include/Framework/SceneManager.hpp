@@ -6,14 +6,14 @@
 class SceneManager {
     public:
         SceneManager();
-        ~SceneManager();
 
+        int     UpdateCurrentScene(float deltaTime);
+        int     DrawCurrentScene();
+
+        Scene     GetSceneTest();
     protected:
 
     private:
-        int     UpdateCurrentScene();
-        int     DrawCurrentScene();
-
         Scene   myScene;
 };
 
