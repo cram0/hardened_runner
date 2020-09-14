@@ -13,12 +13,16 @@ int GameCore::Update(CoreClock *coreClock)
 int GameCore::Draw(sf::RenderWindow *gameWindow)
 {
     sceneManager.GetSceneTest().Draw(gameWindow);
+    gameWindow->display();
 }
 
 int GameCore::Run()
 {
     while (this->gameWindow.isOpen()) {
         while (this->gameWindow.pollEvent(this->gameEvent)) {
+            if (gameEvent.type == sf::Event::Closed) {
+                gameWindow.close();
+            }
             Update(&this->coreClock);
             Draw(&this->gameWindow);
         }
