@@ -7,7 +7,7 @@ GameCore::GameCore()
 
 int GameCore::Update(CoreClock *coreClock)
 {
-    sceneManager.GetSceneTest().Update(coreClock->getClock().restart().asMilliseconds());
+   sceneManager.GetSceneTest().Update(coreClock->getClock().restart().asMilliseconds());
 }
 
 int GameCore::Draw(sf::RenderWindow *gameWindow)
@@ -18,7 +18,6 @@ int GameCore::Draw(sf::RenderWindow *gameWindow)
 
 int GameCore::Run()
 {
-    sceneManager.ParseScenes("src/scenes/Scenes.json");
     while (this->gameWindow.isOpen()) {
         while (this->gameWindow.pollEvent(this->gameEvent)) {
             if (gameEvent.type == sf::Event::Closed) {

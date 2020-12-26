@@ -9,7 +9,6 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "system_error": "cpp",
-        "typeinfo": "cpp",
-        "iosfwd": "cpp"
+        "typeinfo": "cpp"
     }
 }

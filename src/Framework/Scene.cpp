@@ -2,7 +2,7 @@
 
 Scene::Scene()
 {
-    myEntity.SetTexture("assets/scenes/ForestRun/img/alucard_sheet.png");
+    myEntity.SetTexture("assets/img/alucard/alucard_sheet.png");
 }
 
 int Scene::Update(float deltaTime)
