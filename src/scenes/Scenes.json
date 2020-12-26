@@ -1,0 +1,38 @@
+{
+    "sceneName": "Main Menu",
+    "entities": [
+        {
+            "entityName": "Background Image",
+            "pathName": "assets/scenes/MainMenu/img/menu.png",
+            "animated": "false",
+            "position": [
+                {
+                    "x": "0",
+                    "y": "0"
+                }
+            ]
+        },
+        {
+            "entityName": "Press Start Button",
+            "pathName": "assets/scenes/MainMenu/img/start_button.png",
+            "animated": "false",
+            "position": [
+                {
+                    "x": "100",
+                    "y": "400"
+                }
+            ]
+        },
+        {
+            "entityName": "Castlevania Title Screen",
+            "pathName": "assets/scenes/MainMenu/img/title.png",
+            "animated": "false",
+            "position": [
+                {
+                    "x": "100",
+                    "y": "200"
+                }
+            ]
+        }
+    ]
+}
