@@ -8,7 +8,7 @@ CXXFLAGS    +=      -Wall
 CXXFLAGS    +=      -Wextra
 CXXFLAGS    +=      -Wno-unused-parameter
 
-CXXFLAGS    +=      -I./include -I./include/Framework
+CXXFLAGS    +=      -I./include -I./include/framework -I./lib
 
 all         :       $(NAME)
 
@@ -26,9 +26,7 @@ re          :       fclean all
 
 
 launch      :       re clean
-					clear
 					./$(NAME)
 
 vg          :       re clean
-					clear
 					valgrind ./$(NAME)
