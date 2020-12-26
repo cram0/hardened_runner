@@ -3,12 +3,17 @@
 
 #include "Scene.hpp"
 
+#include "json.hpp"
+#include <iostream>
+
 class SceneManager {
     public:
         SceneManager();
 
         int     UpdateCurrentScene(float deltaTime);
         int     DrawCurrentScene();
+
+        int     ParseScenes(char *scenesPath);
 
         Scene     GetSceneTest();
     protected:

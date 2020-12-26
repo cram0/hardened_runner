@@ -31,3 +31,4 @@
 *.out
 *.app
 hrunner
+.vscode/settings.json
